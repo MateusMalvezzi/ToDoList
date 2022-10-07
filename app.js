@@ -41,13 +41,19 @@ function addTodo(event){
 
     //Clear todo input value
     todoInput.value = "";
-
-
 }
 function deleteTodo(e) {
     const item = e.target;
     if(item.classList[0] === "trash-btn"){
         const todo = item.parentElement;
         todo.remove();
+    }
+
+    //check mark
+    if(item.classList[0] === "complete-btn"){
+        const todo = item.parentElement;
+        todo.classList.toggle("completed");
+        //The toggle() method toggles between hide() and show() for the selected elements
+
     }
 }
