@@ -92,7 +92,7 @@ select{
 }
 select{
     padding:5px;
-    width: 105px;
+    width: 106px;
     cursor: pointer;
 }
 .select::after{
