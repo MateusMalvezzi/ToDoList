@@ -50,10 +50,12 @@ Os próximos passos são:<br>
 - Deixar na responsividade padrão mobile, pois hoje o projeto está apenas no padrão web (meu monitor é de 24 polegadas).
 <br><br>
 ## :page_with_curl: Some comments <br>
-- The appendChild() method of the Node interface adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position.<br>
-- Child nodes include elements, text and comments. The items in the collection of nodes are objects, not strings. To get data from node objects, use their properties.<br>
-- The forEach() method calls a function for each element in an array. The forEach() method is not executed for empty elements.<br>
+- The appendChild() → method of the Node interface adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position.<br>
+- Child nodes → include elements, text and comments. The items in the collection of nodes are objects, not strings. To get data from node objects, use their properties.<br>
+- The forEach() → method calls a function for each element in an array. The forEach() method is not executed for empty elements.<br>
 - e.tagert.value → Is the value property of some DOM element, in this case that means the text entered in the search input.
+- The preventDefault() → method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur. For example, this can be useful when: Clicking on a "Submit" button, prevent it from submitting a form.
+- Parent element → is read only property which returns the parent element of the selected element. The element object represents an HTML element, like P, DIV, etc. Return Value: The parentElement property returns an element object representing parent element if present or else it will return null.
 <br><br>
 ## :wrench: Built With
 
