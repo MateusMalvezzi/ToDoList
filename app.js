@@ -1,5 +1,5 @@
 //selectors
-const todoInput = document.querySelector(".todo-input");
+const todoInput = document.querySelector(".todo-input"); // usar getElementByID
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector('.filter-todo')
@@ -13,7 +13,7 @@ const filterOption = document.querySelector('.filter-todo')
 function addTodo(event){
 
     //prevent form from submitting
-    event.preventDefault();
+    event.preventDefault(); // button do tipo button não envia form
 
     //Todo Div
     const todoDiv = document.createElement("div");
@@ -27,15 +27,15 @@ function addTodo(event){
     
     //check mark button
     const completedButton = document.createElement("button");
-    completedButton.innerHTML = `<i class="fas fa-check"></i>`;
+    completedButton.innerHTML = `<i class="fas fa-check"></i>`; // isso pode ser class
     completedButton.classList.add("complete-btn");
-    todoDiv.appendChild(completedButton);
+    todoDiv.appendChild(completedButton); // poe o event listener aqui - complete
 
     //check trash button
     const trashButton = document.createElement("button");
-    trashButton.innerHTML = `<i class="fas fa-trash"></i>`;
+    trashButton.innerHTML = `<i class="fas fa-trash"></i>`; // isso pode ser class
     trashButton.classList.add("trash-btn");
-    todoDiv.appendChild(trashButton);
+    todoDiv.appendChild(trashButton); // poe o event listener aqui - delete
 
     //Append to list
     todoList.appendChild(todoDiv);
@@ -45,7 +45,7 @@ function addTodo(event){
 }
 function deleteTodo(e) {
     const item = e.target;
-    if(item.classList[0] === "trash-btn"){
+    if(item.classList[0] === "trash-btn"){ // teoricamente vc já pode saber q esse é o botão do lixo - e exixte um "hasClass" ou algo do tipo
         const todo = item.parentElement;
         todo.remove();
     }
@@ -56,7 +56,7 @@ function deleteTodo(e) {
         //The toggle() method toggles between hide() and show() for the selected elements
     }
 }
-function filterTodo(e) {
+function filterTodo(e) { // isso aqui é só mudar css global, não precisa fazer item a item
     const todos = todoList.childNodes;
     todos.forEach(function(todo){
         switch(e.target.value){
